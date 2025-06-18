@@ -1,0 +1,40 @@
+{
+    "title": "Review",
+    "type": "object",
+    "properties": {
+        "summary": {
+            "type": "string",
+            "description": "A breif summary of the review "
+        },
+        "sentiment": {
+            "type": "string",
+            "enum": ["pos", "neg"],
+            "description": "Return Sentiment of the review either Negative or Positive "
+
+        },
+        "key_themes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Write down all the key themes discussed in the review "
+        },
+        "pros": {
+            "type": ["array", "null"],
+            "items": {
+                "type": "string"
+            },
+            "description": "Write down all the pros inside a list"
+        },
+        "cons": {
+            "type": ["array", "null"],
+            "items": {
+                "type": "string"
+            },
+            "description": "Write down all the cons inside a list"
+        }
+
+
+    },
+    "required": ["key_themes", "summary", "sentiment"]
+}
